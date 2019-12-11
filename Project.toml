@@ -3,6 +3,11 @@ uuid = "8b682809-697e-4f52-ba3d-584cce8f38ca"
 authors = ["Jan Weidner"]
 version = "0.1.0"
 
+[deps]
+EponymKeywordSyntax = "d38a42db-3801-4ba0-8d69-b527598ec48c"
+GitHub = "bc5e4493-9b4d-5f90-b8aa-2b2bcaad7a26"
+PkgTemplates = "14b8a8f1-9102-5b29-a752-f990bacb7fe1"
+
 [compat]
 julia = "1.3"
 
