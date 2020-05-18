@@ -4,7 +4,6 @@ authors = ["Jan Weidner"]
 version = "0.1.0"
 
 [deps]
-Delme1 = "65ebb08e-3f02-42b1-ae6d-83e1cf0f5dfe"
 PkgTemplates = "14b8a8f1-9102-5b29-a752-f990bacb7fe1"
 
 [compat]
