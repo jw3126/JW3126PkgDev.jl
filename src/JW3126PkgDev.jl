@@ -1,19 +1,18 @@
 module JW3126PkgDev
 export gen
 using PkgTemplates
+const PT = PkgTemplates
 
-const DEFAULT_TEMPLATE = Template(;
-       license="MIT",
-       ssh=true,         
+const gen = Template(;
        plugins=[
-           TravisCI(),   
-           Codecov(),    
-           GitHubPages(),
+            PT.Git(; ssh=true, manifest=true),
+            PT.Develop(),
+            PT.TagBot(),
+            PT.TravisCI(windows=false, osx=false, linux=true),
+            PT.Documenter{TravisCI}(),
+            PT.GitHubActions(),
+            PT.Codecov(),
        ],
    )
-
-function gen(name, template=DEFAULT_TEMPLATE)
-    PkgTemplates.generate(template, name)
-end
 
 end # module
