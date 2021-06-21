@@ -5,11 +5,11 @@ const PT = PkgTemplates
 
 const gen = Template(;
        plugins=[
-            PT.Git(; ssh=true, manifest=true),
+            PT.Git(; ssh=true, manifest=false),
             PT.Develop(),
             PT.TagBot(),
-            PT.TravisCI(windows=false, osx=false, linux=true),
-            PT.Documenter{TravisCI}(),
+            # PT.TravisCI(windows=false, osx=false, linux=true),
+            PT.Documenter{GitHubActions}(),
             PT.GitHubActions(),
             PT.Codecov(),
        ],
